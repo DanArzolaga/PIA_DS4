@@ -55,6 +55,9 @@ $sqlComandatmp   = ("SELECT * FROM vcomanda_detalle");
 $queryComandatmp = mysqli_query($con, $sqlComandatmp);
 $cantidad     = mysqli_num_rows($queryComandatmp);
 
+$sqlMesa         = ("SELECT * FROM mesa");
+$dataMesaSelect  = mysqli_query($con, $sqlMesa);
+
 $precioTotal = 0.00;
 $sumPrecioTotal = 0.00;
 
@@ -81,6 +84,7 @@ $sumPrecioTotal = 0.00;
 <div class="row clearfix">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
   <div class="body">
+
       <div class="row clearfix">
 
         <div class="col-sm-5">

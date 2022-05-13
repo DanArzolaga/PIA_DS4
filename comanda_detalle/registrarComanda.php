@@ -19,7 +19,22 @@ $dataUsuarioSelect  = mysqli_query($con, $sqlUsuario);
 <form name="form-data" action="recibComanda.php?metodo=1" method="POST">
 
 <div class="row">
-<input type=text name=metodo value=1 hidden>
+
+    <div class="col-md-6">
+        <div class="form-group">
+            <label>Mesa</label>
+              <select name="mesa" class="form-control">
+                <option value="">Seleccione una mesa</option>
+        <?php
+          while ($dataSelect = mysqli_fetch_array($dataMesaSelect)) { ?>
+            <option value="<?php echo $dataSelect["IdMesa"]; ?>">
+              <?php echo utf8_encode($dataSelect["Descrip"]); ?>
+            </option>
+        <?php } ?>
+      </select>
+    </div>
+  </div>
+
   <div class="col-md-7 mt-2">
       <label for="menu" class="form-label">Platillo</label>
       <select name="menu" class="form-control">
