@@ -50,7 +50,7 @@ $dataUsuarioSelect  = mysqli_query($con, $sqlUsuario);
 
   <div class="col-md-2 mt-2">
       <label for="cantidad" class="form-label">Cantidad</label>
-      <input type="number" class="form-control" name="cantidad" required='true' autofocus>
+      <input type="number" class="form-control" name="cantidad"  value=1 required='true' autofocus>
   </div>
 
   
